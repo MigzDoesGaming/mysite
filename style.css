@@ -58,24 +58,25 @@ footer {
 .tile-grid {
   display: flex;
   justify-content: center;
-  gap: 0; /* Remove horizontal gap between columns */
-  transform: perspective(800px) rotateX(30deg);
+  gap: 0;
+  transform: perspective(900px) rotateX(25deg);
   transform-origin: top;
 }
-
 
 .tile-column {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 0;
 }
 
 .tile {
   width: 60px;
   height: 60px;
-  background-color: transparent;
-  border: 1px solid black; /* Optional: gives tile edges */
+  margin-top: -1px; /* tight stacking */
+  background: transparent;
+  border: 1px solid black;
   transform: skewX(-20deg);
 }
+
 
 
