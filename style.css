@@ -72,7 +72,7 @@ footer {
 .tile {
   width: 60px;
   height: 60px;
-  background: #FF66B2; /* A lighter solid pink */
+  background: #FF0099; /* A lighter solid pink */
   border: 1px solid #cc0066; /* Optional: gives tile edges */
   transform: skewX(-20deg);
 }
