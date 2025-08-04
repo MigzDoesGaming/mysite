@@ -72,14 +72,9 @@ footer {
 .tile {
   width: 60px;
   height: 60px;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: #FF66B2; /* A lighter solid pink */
+  border: 1px solid #cc0066; /* Optional: gives tile edges */
   transform: skewX(-20deg);
-  transition: background 0.3s ease;
-}
-
-.tile:hover {
-  background: rgba(0, 0, 0, 0.4);
 }
 
 
