@@ -56,19 +56,24 @@ footer {
 }
 
 .tile-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Force 4 columns */
-  gap: 10px;
-  max-width: 800px;
-  margin: auto;
-  transform: perspective(800px) rotateX(25deg);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transform: perspective(800px) rotateX(30deg);
   transform-origin: top;
 }
 
+.tile-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .tile {
+  width: 60px;
+  height: 60px;
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.4);
-  height: 60px;
   transform: skewX(-20deg);
   transition: background 0.3s ease;
 }
