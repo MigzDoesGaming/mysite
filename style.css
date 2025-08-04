@@ -70,8 +70,8 @@ footer {
 }
 
 .tile {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   margin-top: -1px; /* tight stacking */
   background: transparent;
   border: 1px solid black;
