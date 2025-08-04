@@ -55,7 +55,6 @@ footer {
   position: relative;
 }
 
-/* Flex container for columns */
 .tile-grid {
   display: flex;
   justify-content: center;
@@ -63,23 +62,27 @@ footer {
   height: 100%;
   transform: perspective(800px) rotateX(30deg);
   transform-origin: top;
-  gap: 0; /* no space between columns */
+  gap: 0; /* Ensure there's no gap between columns */
+  padding: 0;
+  margin: 0;
 }
 
-/* Each column of tiles */
 .tile-column {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 0; /* no space between tiles */
-  margin-left: -10px; /* negative margin to shift each column left slightly */
+  padding: 0;
+  margin: 0;               /* Remove space around columns */
+  margin-left: -1px;       /* Optional: tiny overlap to close seams */
 }
 
-/* Each tile */
 .tile {
   width: 80px;
   height: 80px;
   background-color: transparent;
   border: 1px solid black;
   transform: skewX(-20deg);
+  margin: 0;               /* Remove space around each tile */
+  padding: 0;
 }
+
