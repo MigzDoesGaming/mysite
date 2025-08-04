@@ -5,43 +5,73 @@
   box-sizing: border-box;
 }
 
-/* === Body and Background === */
+/* === Body and Wallpaper === */
 body {
   min-height: 100vh;
-  background-color: #FFD400; /* Yellow wall */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #292929;
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  /* Yellow wall with tile grid */
+  background-color: #FFD400;
+  background-image:
+    linear-gradient(0deg, #f3c900 1px, transparent 1px),
+    linear-gradient(90deg, #f3c900 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-repeat: repeat;
 }
 
-/* === Main Content === */
+/* === Main Content Styling === */
 main {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
+  width: 100%;
   text-align: center;
 }
 
-/* === Welcome Text Box === */
-.overlay-text {
-  background-color: rgba(0, 0, 0, 0.3); /* Optional overlay */
-  padding: 40px;
-  border-radius: 16px;
-  color: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.overlay-text h1 {
+/* === Headings / Text === */
+h1 {
   font-size: 3rem;
+  margin-bottom: 1rem;
   font-weight: bold;
 }
 
-/* === Footer / Pink Floor === */
+p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+/* === Footer (Pink Floor) === */
 footer {
-  background-color: #FF0099;
-  height: 200px;
   width: 100%;
+  height: 120px;
+  background-color: #FF0099;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  footer {
+    height: 100px;
+    font-size: 0.9rem;
+  }
 }
