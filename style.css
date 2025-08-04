@@ -49,13 +49,13 @@ p {
 
 footer {
   width: 100%;
-  height: 300px;
+  height: 350px;
   background-color: #FF0099;
   overflow: hidden;
   position: relative;
 }
 
-/* Grid holds 4 vertical columns */
+/* Flex container for columns */
 .tile-grid {
   display: flex;
   justify-content: center;
@@ -63,22 +63,23 @@ footer {
   height: 100%;
   transform: perspective(800px) rotateX(30deg);
   transform-origin: top;
-  gap: 4px; /* spacing between columns */
+  gap: 0; /* no space between columns */
 }
 
-/* Each column stacks 10 tiles vertically */
+/* Each column of tiles */
 .tile-column {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 2px; /* spacing between tiles vertically */
+  gap: 0; /* no space between tiles */
+  margin-left: -10px; /* negative margin to shift each column left slightly */
 }
 
 /* Each tile */
 .tile {
-  width: 60px;
-  height: 60px;
-  background-color: transparent; /* matches footer background */
-  border: 1px solid black; /* black edges */
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: 1px solid black;
   transform: skewX(-20deg);
 }
