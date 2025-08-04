@@ -73,7 +73,7 @@ footer {
   width: 60px;
   height: 60px;
   background: #FF0099; /* A lighter solid pink */
-  border: 1px solid #cc0066; /* Optional: gives tile edges */
+  border: 1px solid black; /* Optional: gives tile edges */
   transform: skewX(-20deg);
 }
 
