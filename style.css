@@ -53,6 +53,7 @@ h1 {
     font-family: 'Inter', sans-serif;
   font-size: 3rem;
   font-weight: bold;
+   letter-spacing: -1px; /* Compress slightly */
   color: #000;   /* Or white, or whatever stands out */
 }
 
