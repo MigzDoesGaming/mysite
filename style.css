@@ -42,6 +42,19 @@ h1 {
   font-weight: bold;
 }
 
+.name-heading {
+  position: absolute;
+  top: 40px;     /* Adjust this to move it lower/higher */
+  left: 40px;    /* Adjust this to move it further right */
+  z-index: 10;   /* Ensure it stays on top */
+}
+
+.name-heading h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;   /* Or white, or whatever stands out */
+}
+
 
 
 p {
