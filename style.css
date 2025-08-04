@@ -42,6 +42,8 @@ h1 {
   font-weight: bold;
 }
 
+
+
 p {
   font-size: 1.2rem;
   max-width: 700px;
@@ -86,3 +88,7 @@ footer {
   padding: 0;
 }
 
+.no-tiles {
+  background-color: #FFD400; /* same as body background */
+  padding: 20px;
+}
