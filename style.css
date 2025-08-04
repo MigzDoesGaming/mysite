@@ -96,8 +96,8 @@ footer {
 }
 
 .tile {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background-color: transparent;
   border: 1px solid black;
   transform: skewX(-20deg);
