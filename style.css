@@ -93,7 +93,7 @@ footer {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  margin: 0 -2px;
+  margin: 0;
   padding: 0;
 }
 
