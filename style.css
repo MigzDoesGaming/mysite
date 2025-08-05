@@ -104,7 +104,7 @@ footer {
   height: 100px;
   background-color: transparent;
   border: 1px solid black;
-  transform: skewX(0deg) rotate(0deg);
+  transform: skewX(-5deg) rotate(0deg);
   margin: 0;
   padding: 0;
 }
