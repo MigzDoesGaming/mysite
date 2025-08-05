@@ -15,3 +15,6 @@ for (let i = 0; i < totalColumns; i++) {
 
   tileGrid.appendChild(column);
 }
+
+
+
