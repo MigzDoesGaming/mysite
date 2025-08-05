@@ -65,13 +65,13 @@ p {
 /* === Footer Chevron Grid === */
 footer {
   width: 100%;
-  height: 200px; /* increased height to fit 12 tiles vertically */
+  height: 250px; /* adjust height based on your design needs */
   background-color: #FF0099;
   overflow: hidden;
   position: relative;
 }
 
-/* === Grid container with columns === */
+/* Grid container with horizontal columns */
 .tile-grid {
   display: flex;
   flex-direction: row;
@@ -83,7 +83,7 @@ footer {
   margin: 0;
 }
 
-/* === Individual columns of tiles === */
+/* Each vertical column of tiles */
 .tile-column {
   display: flex;
   flex-direction: column;
@@ -93,12 +93,12 @@ footer {
   padding: 0;
 }
 
-/* Offset every other column */
+/* Offset every other column for chevron effect */
 .tile-column:nth-child(even) {
-  margin-top: 50px; /* creates the staggered chevron look */
+  margin-top: 50px;
 }
 
-/* === Individual tile appearance === */
+/* Tile styling */
 .tile {
   width: 100px;
   height: 100px;
