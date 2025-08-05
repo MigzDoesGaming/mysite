@@ -31,24 +31,36 @@ const fonts = [
   '"Google Sans Code", monospace'
 ];
 
-const target = document.querySelector(".name-heading h1");
-const originalText = target.textContent;
-target.textContent = ""; // Clear text
+const originalFont = '"Inter", sans-serif';
+const name = "juan miguel sanchez";
+const nameContainer = document.getElementById("animated-name");
 
-// Wrap each letter in a span
-[...originalText].forEach(char => {
-  const span = document.createElement("span");
-  span.textContent = char;
-  target.appendChild(span);
+// Clear any existing content
+nameContainer.innerHTML = "";
+
+// Wrap each letter in a span and insert line break after "miguel"
+[...name].forEach((char, index) => {
+  if (char === " ") {
+    if (index === 10) {
+      // After "miguel", insert a line break
+      nameContainer.appendChild(document.createElement("br"));
+    } else {
+      // Else insert a space character
+      const space = document.createTextNode(" ");
+      nameContainer.appendChild(space);
+    }
+  } else {
+    const span = document.createElement("span");
+    span.textContent = char;
+    nameContainer.appendChild(span);
+  }
 });
 
-const spans = target.querySelectorAll("span");
+const spans = nameContainer.querySelectorAll("span");
 
-// Animate for 4 seconds, every 0.4s
 let time = 0;
-const interval = 400; // 0.4s
-const duration = 4000; // 4s
-const originalFont = '"Inter", sans-serif'; // Your final font
+const interval = 400;
+const duration = 4000;
 
 const fontInterval = setInterval(() => {
   spans.forEach(span => {
@@ -59,8 +71,6 @@ const fontInterval = setInterval(() => {
   time += interval;
   if (time >= duration) {
     clearInterval(fontInterval);
-
-    // Revert to original font
     spans.forEach(span => {
       span.style.fontFamily = originalFont;
     });
