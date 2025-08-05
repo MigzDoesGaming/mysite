@@ -55,20 +55,10 @@ h1 {
   color: #000;
   text-align: left;
   line-height: 0.7;
-  display: flex;
-  flex-wrap: wrap;
 }
 
-/* Animate each letter span individually */
-#animated-name span {
-  display: inline-block;
-  transition: font-family 0.2s ease, transform 0.2s ease;
-  will-change: font-family, transform;
-}
-
-/* Optional: small wobble during font change */
-#animated-name span:hover {
-  transform: scale(1.1);
+.name-heading h1 span {
+  transition: font-family 0.3s ease;
 }
 
 p {
@@ -95,7 +85,6 @@ footer {
   gap: 0;
   padding: 0;
   margin: 0;
-  transform: translateX(43px);
 }
 
 /* Each vertical column of tiles */
@@ -119,7 +108,7 @@ footer {
   height: 100px;
   background-color: transparent;
   border: 1px solid black;
-  transform: skewX(-30deg) rotate(0deg);
+  transform: skewX(-30deg);
   margin: 0;
   padding: 0;
 }
