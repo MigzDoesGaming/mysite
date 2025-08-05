@@ -119,3 +119,13 @@ footer {
   background-color: #FFD400;
   padding: 20px;
 }
+
+.table-png {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px; /* adjust size as needed */
+  z-index: 5;
+}
+
