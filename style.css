@@ -125,7 +125,7 @@ footer {
   bottom: 0;
   left: 20%;
   transform: translateX(-50%);
-  width: 400px; /* adjust size as needed */
+  width: 600px; /* adjust size as needed */
   z-index: 5;
 }
 
