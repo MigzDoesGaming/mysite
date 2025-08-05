@@ -1,7 +1,7 @@
 const tileGrid = document.getElementById("tileGrid");
 
-const totalColumns = 20;
-const tilesPerColumn = 4;
+const totalColumns = 28;
+const tilesPerColumn = 6;
 
 for (let i = 0; i < totalColumns; i++) {
   const column = document.createElement("div");
