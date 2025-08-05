@@ -65,36 +65,40 @@ p {
 /* === Footer Chevron Grid === */
 footer {
   width: 100%;
-  height: 350px;
+  height: 500px; /* increased height to fit 12 tiles vertically */
   background-color: #FF0099;
   overflow: hidden;
   position: relative;
 }
 
-/* Grid container with row layout */
+/* === Grid container with columns === */
 .tile-grid {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
   height: 100%;
   gap: 0;
   padding: 0;
   margin: 0;
 }
 
-/* Each horizontal row of tiles */
-.tile-row {
+/* === Individual columns of tiles === */
+.tile-column {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-/* Offset every other row */
-.tile-row:nth-child(even) {
-  transform: translateX(50px); /* Adjust to match half-tile width */
+/* Offset every other column */
+.tile-column:nth-child(even) {
+  margin-top: 50px; /* creates the staggered chevron look */
 }
 
-/* Individual tile appearance */
+/* === Individual tile appearance === */
 .tile {
   width: 100px;
   height: 100px;
@@ -110,13 +114,3 @@ footer {
   background-color: #FFD400;
   padding: 20px;
 }
-
-.tile-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 0;
-  margin: 0;
-  min-width: 100px; /* REQUIRED to prevent column collapse */
-}
-
