@@ -95,7 +95,7 @@ footer {
 
 /* Offset every other column for chevron effect */
 .tile-column:nth-child(even) {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 /* Tile styling */
