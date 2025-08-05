@@ -13,8 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* Yellow wall with tile grid */
   background-color: #FFD400;
   background-image:
     linear-gradient(0deg, black 2px, transparent 2px),
@@ -44,28 +42,27 @@ h1 {
 
 .name-heading {
   position: absolute;
-  top: 120px;     /* Adjust this to move it lower/higher */
-  left: 70px;    /* Adjust this to move it further right */
-  z-index: 10;   /* Ensure it stays on top */
+  top: 120px;
+  left: 70px;
+  z-index: 10;
 }
 
 .name-heading h1 {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 3rem;
   font-weight: bold;
-   letter-spacing: -3px; /* Compress slightly */
-  color: #000;   /* Or white, or whatever stands out */
-    text-align: left; 
-    line-height: 0.7; 
+  letter-spacing: -3px;
+  color: #000;
+  text-align: left;
+  line-height: 0.7;
 }
-
-
 
 p {
   font-size: 1.2rem;
   max-width: 700px;
 }
 
+/* === Footer Chevron Grid === */
 footer {
   width: 100%;
   height: 350px;
@@ -74,38 +71,42 @@ footer {
   position: relative;
 }
 
+/* Grid container with row layout */
 .tile-grid {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   height: 100%;
-  transform: perspective(800px) rotateX(30deg);
-  transform-origin: top;
-  gap: 0; /* Ensure there's no gap between columns */
+  gap: 0;
   padding: 0;
   margin: 0;
 }
 
-.tile-column {
+/* Each horizontal row of tiles */
+.tile-row {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0;
-  margin: 0;               /* Remove space around columns */
-  margin-left: -1px;       /* Optional: tiny overlap to close seams */
+  flex-direction: row;
 }
 
+/* Offset every other row */
+.tile-row:nth-child(even) {
+  transform: translateX(50px); /* Adjust to match half-tile width */
+}
+
+/* Individual tile appearance */
 .tile {
   width: 100px;
   height: 100px;
   background-color: transparent;
   border: 1px solid black;
   transform: skewX(-20deg);
-  margin: 0;               /* Remove space around each tile */
+  margin: 0;
   padding: 0;
 }
 
+/* Optional: removes grid behind name heading */
 .no-tiles {
-  background-color: #FFD400; /* same as body background */
+  background-color: #FFD400;
   padding: 20px;
 }
