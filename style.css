@@ -123,9 +123,9 @@ footer {
 .table-png {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 20%;
   transform: translateX(-50%);
-  width: 200px; /* adjust size as needed */
+  width: 900px; /* adjust size as needed */
   z-index: 5;
 }
 
