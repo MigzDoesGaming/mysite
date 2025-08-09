@@ -69,7 +69,7 @@ p {
 /* === Footer Chevron Grid === */
 footer {
   width: 100%;
-  height: 250px; /* Adjust to fit the number of tiles */
+  height: 300px; /* Adjust to fit the number of tiles */
   background-color: #FF0099;
   overflow: hidden;
   position: relative;
