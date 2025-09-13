@@ -19,6 +19,8 @@ body {
     linear-gradient(90deg, black 2px, transparent 2px);
   background-size: 100px 100px;
   background-repeat: repeat;
+   position: relative; /* Add this line */
+  padding-bottom: 250px;
 }
 
 /* === Main Content Styling === */
@@ -31,6 +33,8 @@ main {
   padding: 60px 20px;
   width: 100%;
   text-align: center;
+   position: relative; /* Add this */
+  z-index: 10; /* Ensure content stays above footer */
 }
 
 /* === Headings / Text === */
@@ -99,6 +103,7 @@ footer {
   align-items: center;
   margin: 0 -2.5px;
   padding: 0;
+   height: 100%;
 }
 
 /* No staggering for diagonal effect */
