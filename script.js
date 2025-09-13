@@ -1,7 +1,7 @@
 // === TILE GRID ===
 const tileGrid = document.getElementById("tileGrid");
 
-const totalColumns = 28;
+const totalColumns = 32; // Increased from 28 to cover wider footer
 const tilesPerColumn = 6;
 
 for (let i = 0; i < totalColumns; i++) {
