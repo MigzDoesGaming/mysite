@@ -12,15 +12,21 @@ body {
   color: #292929;
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: #FFD400;
   background-image:
     linear-gradient(0deg, black 2px, transparent 2px),
     linear-gradient(90deg, black 2px, transparent 2px);
   background-size: 100px 100px;
   background-repeat: repeat;
-   position: relative; /* Add this line */
-  padding-bottom: 250px;
+  position: relative;
+}
+
+/* Content wrapper to push footer down */
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 /* === Main Content Styling === */
@@ -28,13 +34,12 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 60px 20px;
   width: 100%;
-  text-align: center;
-   position: relative; /* Add this */
-  z-index: 10; /* Ensure content stays above footer */
+  position: relative;
+  z-index: 10;
 }
 
 /* === Headings / Text === */
@@ -45,9 +50,7 @@ h1 {
 }
 
 .name-heading {
-  position: absolute;
-  top: 120px;
-  left: 70px;
+  margin-left: 70px;
   z-index: 10;
 }
 
@@ -72,13 +75,12 @@ p {
 
 /* === Footer Chevron Grid === */
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 250px; /* Adjust to fit the number of tiles */
+  height: 250px;
   background-color: #FF0099;
   overflow: hidden;
+  position: relative;
+  margin-top: auto; /* This pushes footer to bottom */
 }
 
 /* Grid container with horizontal columns */
@@ -91,8 +93,10 @@ footer {
   gap: 0;
   padding: 0;
   margin: 0;
-  transform: translateX(-20px);
-  width: calc(100% + 40px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 110%; /* Extend beyond container to cover edges */
 }
 
 /* Each vertical column of tiles */
@@ -103,12 +107,7 @@ footer {
   align-items: center;
   margin: 0 -2.5px;
   padding: 0;
-   height: 100%;
-}
-
-/* No staggering for diagonal effect */
-.tile-column:nth-child(even) {
-  margin-top: 0;
+  height: 100%;
 }
 
 /* Tile styling (skewed to appear diagonal) */
@@ -126,14 +125,19 @@ footer {
 .no-tiles {
   background-color: #FFD400;
   padding: 20px;
+  display: inline-block;
 }
 
 .table-png {
   position: absolute;
   bottom: -50px;
-  left: 80%;
-  transform: translateX(-50%);
-  width: 600px; /* adjust size as needed */
+  right: 10%;
+  width: 600px;
   z-index: 5;
 }
 
+/* Overlay text adjustments */
+.overlay-text {
+  position: relative;
+  width: 100%;
+}
